@@ -1,30 +1,26 @@
 language: node_js
 node_js:
-  - 0.10
-
+- 0.1
 env:
   matrix:
-    - JOB=unit
-    - JOB=e2e
+  - JOB=unit
+  - JOB=e2e
   global:
-    - SAUCE_USERNAME=angular-ci
-    - SAUCE_ACCESS_KEY=9b988f434ff8-fbca-8aa4-4ae3-35442987
-    - BROWSER_STACK_USERNAME=VojtaJina
-    - BROWSER_STACK_ACCESS_KEY=HAfHZaypxAc3PEUrUU9a
-    - LOGS_DIR=/tmp/angular-build/logs
-    - BROWSER_PROVIDER_READY_FILE=/tmp/sauce-connect-ready
-
+  - SAUCE_USERNAME=angular-ci
+  - SAUCE_ACCESS_KEY=9b988f434ff8-fbca-8aa4-4ae3-35442987
+  - LOGS_DIR=/tmp/angular-build/logs
+  - BROWSER_PROVIDER_READY_FILE=/tmp/sauce-connect-ready
+  - secure: D6yIh85qVoDQY65v+bGB1b60E6H/648w5NLa+A/zqn6YAOiIJtLHIR1G/Rw8coZQpjcuWAwi5fhWfeca5CLsN0GruiRAb06Xh18UQdJMhnfU7lmNT5qzCaf0TDDNJXuYVntxvJbRMIJco2S/KBzxOQmdDNE/YFh2whhOIBCxSO4=
+  - secure: UIt5VnyVHCSd+OEZLyFc/FHb9eEG/+EN1DDTr3y54SkFvrJYFQgtWorHYoaRosSC2QKKIltxB0NsoBhRIKac2ozj+RP9GUOlp1bkwsX9b7DApIXHHv8mdyTAncBzI0TBmIJDaK9/akYiQVPxqfcIEUnrbE9hcjoGLcWppg/SjJU=
 before_script:
-  - mkdir -p $LOGS_DIR
-  - ./lib/sauce/sauce_connect_setup.sh
-  - npm install -g grunt-cli
-  - grunt bower
-  - grunt bower
-  - grunt package-without-bower
-  - ./scripts/travis/wait_for_browser_provider.sh
-
+- mkdir -p $LOGS_DIR
+- ./lib/sauce/sauce_connect_setup.sh
+- npm install -g grunt-cli
+- grunt bower
+- grunt bower
+- grunt package-without-bower
+- ./scripts/travis/wait_for_browser_provider.sh
 script:
-  - ./scripts/travis/build.sh
-
+- ./scripts/travis/build.sh
 after_script:
-  - ./scripts/travis/print_logs.sh
+- ./scripts/travis/print_logs.sh
