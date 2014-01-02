@@ -10,8 +10,8 @@ env:
   - SAUCE_ACCESS_KEY=9b988f434ff8-fbca-8aa4-4ae3-35442987
   - LOGS_DIR=/tmp/angular-build/logs
   - BROWSER_PROVIDER_READY_FILE=/tmp/sauce-connect-ready
-  - secure: D6yIh85qVoDQY65v+bGB1b60E6H/648w5NLa+A/zqn6YAOiIJtLHIR1G/Rw8coZQpjcuWAwi5fhWfeca5CLsN0GruiRAb06Xh18UQdJMhnfU7lmNT5qzCaf0TDDNJXuYVntxvJbRMIJco2S/KBzxOQmdDNE/YFh2whhOIBCxSO4=
-  - secure: UIt5VnyVHCSd+OEZLyFc/FHb9eEG/+EN1DDTr3y54SkFvrJYFQgtWorHYoaRosSC2QKKIltxB0NsoBhRIKac2ozj+RP9GUOlp1bkwsX9b7DApIXHHv8mdyTAncBzI0TBmIJDaK9/akYiQVPxqfcIEUnrbE9hcjoGLcWppg/SjJU=
+  - secure: QR1IvEgnUPiVytCAoPJSWbwlAvYtPacbP8eumryRmI2GO7hsb3kwl2hj8OJ5vS7F2+a1VNhQcY2G83EOoQn97KUAqqbCT1j67V3Y2ucVfW0+lZZl4ZeXLU7AcDcalFC15jkVbAn+BGPLS9Pul/4Vv4XJgC33uCnlRlXlXFG9rf0=
+  - secure: dR/xBuM7U24xd327AXJssbFrF26E4EhrLjUWuWxr7lq6d9ZTNT23OiSKcrBtDcaWzhhzPXNRjWNJq12PfW5AI5caaLPffkt2QdQUli5dq2sSSF+gI+6ysY3oJ+Qd1Pz6010n/AjoqTaBOsIg3o5U2PX9KA4MM74+Tf66Iim6ZW8=
 before_script:
 - mkdir -p $LOGS_DIR
 - ./lib/sauce/sauce_connect_setup.sh
