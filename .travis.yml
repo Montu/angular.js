@@ -8,10 +8,8 @@ env:
   global:
   - LOGS_DIR=/tmp/angular-build/logs
   - BROWSER_PROVIDER_READY_FILE=browserstack
-  - secure: QR1IvEgnUPiVytCAoPJSWbwlAvYtPacbP8eumryRmI2GO7hsb3kwl2hj8OJ5vS7F2+a1VNhQcY2G83EOoQn97KUAqqbCT1j67V3Y2ucVfW0+lZZl4ZeXLU7AcDcalFC15jkVbAn+BGPLS9Pul/4Vv4XJgC33uCnlRlXlXFG9rf0=
-  - secure: dR/xBuM7U24xd327AXJssbFrF26E4EhrLjUWuWxr7lq6d9ZTNT23OiSKcrBtDcaWzhhzPXNRjWNJq12PfW5AI5caaLPffkt2QdQUli5dq2sSSF+gI+6ysY3oJ+Qd1Pz6010n/AjoqTaBOsIg3o5U2PX9KA4MM74+Tf66Iim6ZW8=
-  - secure: dzBJ/JksOjgOl1RmjZfuLveam5I8YOGCYL3WnpkSBBi0QDif66zDNNPjX3kg2wXImP4c4+wierIoriGGaQbWGm3ACqUyebTpDBUa7hnUaGknJ/ON1jHuCeDBmexniehcZqv6uJLNtbn3a4e/+imIc59fbnyllA1FjPmKyA3cdX0=
-  - secure: Z7Scbns7eEFKg3DN7mSYLo6/fGU7cNzeHaCbKBuvhTwxsZBG46ceB0YtYAsyFE3olA/3o/9jjQ/VmRnfdgTyEZTojcnUiLgf4VCdrj/80cetrQKyYd8xnhu21f+rGhk5IL3bAVDoDRBrIL9TeCi60/L8pOOelT619ZlAOCSs5TY=
+  - secure: M+/ZfpZIjCJUk9Bek0Hqo2mIfAj6QOipL6hxoctLvv13yk8yItzfrDmPJawjsB9MJiDTSGm2iVKZ2I3XBd9l3eqjnwJf4kQAmD32QPu2cF6YousLSEmlkLY6LUgIqcBx7fGAUkM9a22sThGGzyYD6ioWYrYMRRp9EMTJDjW4XkE=
+  - secure: E7qWKYhwaUAT8XG5rZltknlfViN9l8uVMUdyvnj+CnNKQtO28Jm91PZUrUI6M3VN9Qb9uii0SDG8kCcfLJWZCrTaH1ec+wuPPCIklQFEgy3bEBRaAK29lN1mG3SOpDduUUlUho3ixDrjYFa6ZrWFpHQ41WMvYbDQLCqr7Ag1M/c=
 before_script:
 - mkdir -p $LOGS_DIR
 - ./scripts/travis/start_browser_provider_tunnel.sh
