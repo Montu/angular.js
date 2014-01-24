@@ -2,19 +2,17 @@
 
 set -e
 
-export SAUCE_ACCESS_KEY=`echo $SAUCE_ACCESS_KEY | rev`
+#export SAUCE_ACCESS_KEY=`echo $SAUCE_ACCESS_KEY | rev`
+BROWSERS="BS_Chrome,BS_Safari,BS_Firefox,BS_IE_8,BS_IE_9,BS_IE_10,BS_IE_11"
+E2E_BROWSERS="BS_Chrome"
 
 if [ $JOB = "unit" ]; then
   grunt ci-checks
   grunt test:docgen
   grunt test:promises-aplus
-  grunt test:unit --browsers SL_Chrome,SL_Safari,SL_Firefox,SL_IE_8,SL_IE_9,SL_IE_10,SL_IE_11 --reporters dots
+  grunt test:unit --browsers $BROWSERS --reporters dots
 elif [ $JOB = "e2e" ]; then
   grunt test:e2e --browsers SL_Chrome --reporters dots
-  grunt test:protractor --sauceUser $SAUCE_USERNAME \
-      --sauceKey $SAUCE_ACCESS_KEY \
-      --capabilities.tunnel-identifier=$TRAVIS_JOB_NUMBER \
-      --capabilities.build=$TRAVIS_BUILD_NUMBER
 else
   echo "Unknown job type. Please set JOB=unit or JOB=e2e."
 fi
