@@ -1,16 +1,15 @@
 language: node_js
 node_js:
 	- 0.10
-
 env:
   matrix:
-  - JOB=unit
-  - JOB=e2e
+	  - JOB=unit
+	  - JOB=e2e
   global:
-  - LOGS_DIR=/tmp/angular-build/logs
-  - BROWSER_PROVIDER_READY_FILE=/tmp/sauce-connect-ready
-  - secure: M+/ZfpZIjCJUk9Bek0Hqo2mIfAj6QOipL6hxoctLvv13yk8yItzfrDmPJawjsB9MJiDTSGm2iVKZ2I3XBd9l3eqjnwJf4kQAmD32QPu2cF6YousLSEmlkLY6LUgIqcBx7fGAUkM9a22sThGGzyYD6ioWYrYMRRp9EMTJDjW4XkE=
-  - secure: E7qWKYhwaUAT8XG5rZltknlfViN9l8uVMUdyvnj+CnNKQtO28Jm91PZUrUI6M3VN9Qb9uii0SDG8kCcfLJWZCrTaH1ec+wuPPCIklQFEgy3bEBRaAK29lN1mG3SOpDduUUlUho3ixDrjYFa6ZrWFpHQ41WMvYbDQLCqr7Ag1M/c=
+	  - LOGS_DIR=/tmp/angular-build/logs
+	  - BROWSER_PROVIDER_READY_FILE=/tmp/sauce-connect-ready
+	  - secure: M+/ZfpZIjCJUk9Bek0Hqo2mIfAj6QOipL6hxoctLvv13yk8yItzfrDmPJawjsB9MJiDTSGm2iVKZ2I3XBd9l3eqjnwJf4kQAmD32QPu2cF6YousLSEmlkLY6LUgIqcBx7fGAUkM9a22sThGGzyYD6ioWYrYMRRp9EMTJDjW4XkE=
+	  - secure: E7qWKYhwaUAT8XG5rZltknlfViN9l8uVMUdyvnj+CnNKQtO28Jm91PZUrUI6M3VN9Qb9uii0SDG8kCcfLJWZCrTaH1ec+wuPPCIklQFEgy3bEBRaAK29lN1mG3SOpDduUUlUho3ixDrjYFa6ZrWFpHQ41WMvYbDQLCqr7Ag1M/c=
 before_script:
 	- export BROWSER_PROVIDER=browserstack
 	- mkdir -p $LOGS_DIR
